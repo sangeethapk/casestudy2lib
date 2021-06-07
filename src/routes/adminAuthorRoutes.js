@@ -5,7 +5,6 @@ const adminAuthorRouter = express.Router();
 adminAuthorRouter.use(express.static('./public'));
 
 
-
 //multer global declarations
 var path = require('path');
 const multer = require('multer');

@@ -9,8 +9,7 @@ function router(nav){
 
     listubookupdateRouter.get('/',function(req,res){
 
-    
-    
+        
     Bookdata.find()
     .then(function(books){
         console.log("-------------------------"+books);
@@ -20,7 +19,7 @@ function router(nav){
             nav,
             title:"Library",
             books,
-            Home:"/index"
+            Home:"/index1"
 
     });
     
@@ -37,7 +36,7 @@ listubookupdateRouter.get('/:id',function(req,res){
             nav,
             title:"Library",
             book:booksdetails[id],
-            Home:"/index"
+            Home:"/index1"
 
         });
 

@@ -48,7 +48,7 @@ function router() {
                     user.save()
                         .then(() => {
                             console.log("redirect to login")
-                            res.redirect("/login");
+                            res.redirect("/index");
 
                         })
                         .catch(()=>{

@@ -34,7 +34,7 @@ app.use("/books", bookRouter);
 app.use("/authors", authorRouter);
 app.use("/addbooks",adminRouter);
 app.use("/addauthor",adminAuthorRouter);
-///app.use("/login", loginRouter);
+///app.use("/index", loginRouter);
 app.use("/updatebook",updatebookRouter);
 app.use("/updateauthor",updateauthorRouter);
 app.use("/deletebook",deletebookRouter);
@@ -54,13 +54,13 @@ app.use("/listauthorsforupdate",listauthorupdateRouter);
 ///------------------------------Login----------------------------------------------------------
 
   
-app.get('/login', function(req, res){
+app.get('/index', function(req, res){
     console.log("inside get");
-         res.render('login',{ message: ' ' });
+         res.render('index',{ message: ' ' });
           
  });
 
- app.post('/login', function(req, res){
+ app.post('/index', function(req, res){
       console.log("login entry");
  
    try{
@@ -83,7 +83,7 @@ app.get('/login', function(req, res){
                         { link: '/', name: 'Log Out' });
                         
                         
-                        res.render('index', { 
+                        res.render('index1', { 
                             nav,
                             title: "Library",
                             img: "admin.png"
@@ -99,7 +99,7 @@ app.get('/login', function(req, res){
                            
                             { link: '/', name: 'Log Out' }
                          ); 
-                        res.render('index', { nav,
+                        res.render('index1', { nav,
                             title: "Library",
                             img: "library.png"
                      });
@@ -109,9 +109,9 @@ app.get('/login', function(req, res){
                 }
             }
             else {
-               // res.render('login', { message: 'Username doesnot exist...' });
+                res.render('index', { message: 'Username doesnot exist...' });
 
-               res.send("error");
+              // res.send("error");
             }
      
         
@@ -155,7 +155,7 @@ app.get('/index', function (req, res) {
 
 app.get('/', function (req, res) {
 
-res.render('login', { message: ' ' });
+res.render('index', { message: ' ' });
 });
 
 

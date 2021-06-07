@@ -16,7 +16,7 @@ function router(nav){
             nav,
             title:"Library",
             authors,
-            Home:"/index",
+            Home:"/index1",
             
 
     });
@@ -34,7 +34,7 @@ authorRouter.get('/:id',function(req,res){
             nav,
             title:"Library",
             author:authorsdetails[id],
-            Home:"/index"
+            Home:"/index1"
 
         });
 

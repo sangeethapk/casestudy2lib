@@ -41,7 +41,7 @@ function router(nav) {
                     nav,
                     title: "Library",
                     author,
-                    Home: "/index"
+                    Home: "/index1"
 
                 });
 

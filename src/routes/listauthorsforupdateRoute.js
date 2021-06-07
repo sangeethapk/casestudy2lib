@@ -20,7 +20,7 @@ function router(nav){
             nav,
             title:"Library",
             authors,
-            Home:"/index"
+            Home:"/index1"
 
     });
     
@@ -37,7 +37,7 @@ listuauthorupdateRouter.get('/:id',function(req,res){
             nav,
             title:"Library",
             author:authordetails[id],
-            Home:"/index"
+            Home:"/index1"
 
         });
 

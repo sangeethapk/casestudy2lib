@@ -20,7 +20,7 @@ bookRouter.get('/',function(req,res){
             nav,
             title:"Library",
             books,
-            Home:"/index"
+            Home:"/index1"
 
     });
     
@@ -37,7 +37,7 @@ bookRouter.get('/:id',function(req,res){
             nav,
             title:"Library",
             book:booksdetails[id],
-            Home:"/index"
+            Home:"/index1"
 
         });
 
