@@ -1,10 +1,12 @@
 const mongoose=require('mongoose');
 //mongoose.connect("mongodb://localhost:27017/library");
 
-mongoose.connect("mongodb://localhost:27017/library")
+
+(async () => {
+    await mongoose.connect("mongodb://localhost:27017/library")
 .then (() => console.log ('MongoDB connected.')) 
 .catch (err => console.error (err)) 
-
+  })()
 
 const Schema=mongoose.Schema;
 const CredentialSchema=new Schema({

@@ -60,11 +60,11 @@ app.get('/index', function(req, res){
           
  });
 
- app.post('/index', function(req, res){
+ app.post('/index',async function(req, res){
       console.log("login entry");
  
-   
-       Credentialdata.find({"username":req.body.userName})
+      
+     await Credentialdata.find({"username":req.body.userName})
         .then(function (credential) {
             console.log("--------Credential-----"+credential);
             if (credential.length != 0) {
@@ -113,8 +113,7 @@ app.get('/index', function(req, res){
 
               // res.send("error");
             }
-     
-        
+      
         
      
   
@@ -123,9 +122,9 @@ app.get('/index', function(req, res){
     res.send(err);
 
 });
-  
-
 });
+      
+
 
  
   
