@@ -63,7 +63,7 @@ app.get('/index', function(req, res){
  app.post('/index', function(req, res){
       console.log("login entry");
  
-   try{
+   
        Credentialdata.find({"username":req.body.userName})
         .then(function (credential) {
             console.log("--------Credential-----"+credential);
@@ -123,11 +123,7 @@ app.get('/index', function(req, res){
     res.send(err);
 
 });
-   }
-   catch(error){
-
-    res.send(error);
-   }
+  
 
 });
 
@@ -139,10 +135,10 @@ app.get('/index', function(req, res){
 ///------------------------------End of login---------------------------------------------------
 
 
-app.get('/index', function (req, res) {
+app.get('/index1', function (req, res) {
         
     
-    res.render("index", {
+    res.render("index1", {
     nav,
     title: "Library",
     img: "library.png"
