@@ -13,18 +13,6 @@ function router() {
     signupRouter.post('/', function (req, res) {
         console.log("post");
          
-
-        try{
-            db();
-        }
-        catch(error){
-
-            res.send("Sign up ...error msg" +error);
-        }
-
-
-
-        async function db(){
         //  console.log(credentials.has({username:req.body.userName,password:req.body.password}));
         Credentialdata.find({"username":req.params.username})
             .then(function (credential) {
@@ -62,7 +50,7 @@ function router() {
 
             });
 
-        }
+        
        
         });
 

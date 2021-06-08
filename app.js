@@ -107,12 +107,20 @@ app.get('/index', function(req, res){
 
                     }
                 }
+                else {
+                    // res.render('index', { message: 'Username doesnot exist...' });
+                     console.log("Authentication failed...")
+                     res.render("index",{message:"Authentication failed..."});
+                   // res.send("error");
+                 }
             }
             else {
-                res.render('index', { message: 'Username doesnot exist...' });
-
-              // res.send("error");
-            }
+                // res.render('index', { message: 'Username doesnot exist...' });
+                 console.log("No such  user exist")
+                 res.render("index",{message:"User doesnot exist"});
+               // res.send("error");
+             }
+           
       
         
      

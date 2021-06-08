@@ -2,11 +2,10 @@ const mongoose=require('mongoose');
 //mongoose.connect("mongodb://localhost:27017/library");
 
 
-(async () => {
-    await mongoose.connect("mongodb://localhost:27017/library")
-.then (() => console.log ('MongoDB connected.')) 
-.catch (err => console.error (err)) 
-  })()
+
+ mongoose.connect("mongodb+srv://userone:userone@ictakfiles.9muvg.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority")
+.then (() => console.log ('MongoDB connected.')) ;
+
 
 const Schema=mongoose.Schema;
 const CredentialSchema=new Schema({

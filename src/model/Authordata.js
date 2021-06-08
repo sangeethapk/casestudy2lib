@@ -1,9 +1,9 @@
 const mongoose=require('mongoose');
 //mongoose.connect("mongodb://localhost:27017/library");
 
-mongoose.connect("mongodb://localhost:27017/library")
+mongoose.connect("mongodb+srv://userone:userone@ictakfiles.9muvg.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority")
 .then (() => console.log ('MongoDB connected.')) 
-   .catch (err => console.error (err)) ;
+   
 
 
 const Schema=mongoose.Schema;
