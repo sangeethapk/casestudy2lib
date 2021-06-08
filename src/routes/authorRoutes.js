@@ -4,6 +4,7 @@ const Authordata=require('../model/Authordata');
 
 var authorsdetails=[];
 function router(nav){
+    var nav1=nav;
 
     authorRouter.get('/',function(req,res){
     
@@ -13,7 +14,7 @@ function router(nav){
         authorsdetails=authors;
         console.log(authors);
         res.render("authors",{
-            nav,
+            nav1,
             title:"Library",
             authors,
             Home:"/index1",
@@ -31,7 +32,7 @@ authorRouter.get('/:id',function(req,res){
         const id=req.params.id;
 
         res.render("author",{
-            nav,
+            nav1,
             title:"Library",
             author:authorsdetails[id],
             Home:"/index1"
